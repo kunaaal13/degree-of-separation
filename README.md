@@ -22,13 +22,17 @@ NextJs 13, Typescript, Tailwind CSS, Cloudinary(Image Hosting)
 
 ## Screenshots
 
-![Home Page](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+Home Light
+![Home Light](https://github.com/kunaaal13/degree-of-separation/blob/main/public/home-light.png)
 
-![Home Page](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+Home Dark
+![Home Dark](https://github.com/kunaaal13/degree-of-separation/blob/main/public/Home-dark.png)
 
-![Home Page](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+Profie Light
+![Profile light](https://github.com/kunaaal13/degree-of-separation/blob/main/public/Profile-light.png)
 
-![Home Page](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+Sign Up Light
+![Sign Up](https://github.com/kunaaal13/degree-of-separation/blob/main/public/SignUp-light.png)
 
 ## Environment Variables
 
