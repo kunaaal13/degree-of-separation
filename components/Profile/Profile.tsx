@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import Friends from './Friends'
+import Friends from './Friends/Friends'
 import ProfileOption from './ProfileOption'
-import Suggestions from './Suggestions'
+import Suggestions from './Suggestions/Suggestions'
 import UserProfile from './UserProfile'
 
 interface Props {
@@ -10,6 +10,7 @@ interface Props {
 }
 
 function Profile({ user, users }: Props) {
+  // state to manage the selected tab friends/suggestions
   const [selectedOption, setSelectedOption] = useState<String>('Friends')
 
   if (!user) return null

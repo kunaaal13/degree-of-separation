@@ -16,9 +16,9 @@ function UserCard({ user, setSelectedUser, setSelectedMenu }: Props) {
   }, [isActive])
 
   return (
-    <div className='bg-gray-100 rounded-md border shadow-md m-3 h-32 px-3 flex items-center'>
+    <div className='bg-gray-100 dark:bg-gray-700 dark:shadow-gray-700 rounded-md border shadow-md m-3 h-32 px-3 flex items-center'>
       {/* image */}
-      <div className='h-20 rounded-full'>
+      <div className='h-20 w-20 rounded-full'>
         <img
           src={user.img}
           alt={user.name}
@@ -36,7 +36,9 @@ function UserCard({ user, setSelectedUser, setSelectedMenu }: Props) {
           {user.name}
         </h1>
 
-        <p className='text-gray-500 text-sm'>@{user.username}</p>
+        <p className='text-gray-500 text-sm dark:text-gray-200'>
+          @{user.username}
+        </p>
 
         <div className='flex items-center justify-between mt-2'>
           <p className=''>{user.friends.length} friends</p>

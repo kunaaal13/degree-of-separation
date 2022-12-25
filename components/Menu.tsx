@@ -9,7 +9,7 @@ interface Props {
 
 function Menu({ selectedMenu, setSelectedMenu, setSelectedUser }: Props) {
   return (
-    <div className='h-12 bg-white dark:bg-[#242526] border-b shadow-md p-3 flex items-center justify-center'>
+    <div className='h-12 bg-white dark:bg-transparent border-b shadow-md p-3 flex items-center justify-center'>
       <div className='h-full w-2/3 md:w-3/5 flex items-center justify-evenly'>
         <HomeIcon
           className={`${

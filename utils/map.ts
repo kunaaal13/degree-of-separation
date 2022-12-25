@@ -1,30 +1,3 @@
-// // Create Users
-
-// // Create a graph of users and their friends
-// export function createGraph() {
-//   // create a map of users to their friends
-//   const graph: Map<String, Array<String>> = new Map()
-
-//   // adjacency list
-//   const users: Array<[String, Array<String>]> = [
-//     ['Sameer', ['Aayushi', 'Kamal']],
-//     ['Aayushi', ['Sameer', 'Bhaskar']],
-//     ['Bhaskar', ['Aayushi', 'Shanti']],
-//     ['Kamal', ['Sameer', 'Shanti']],
-//     ['Shanti', ['Bhaskar', 'Kamal']],
-//   ]
-
-//   // add users
-//   users.forEach((user) => addUser(graph, user[0]))
-
-//   // add friends
-//   users.forEach((user) => {
-//     user[1].forEach((friend) => addFriend(graph, user[0], friend))
-//   })
-
-//   return graph
-// }
-
 // Add a user to a map of users to their friends
 export function addUser(map: Map<String, Array<String>>, user: String) {
   if (map.has(user)) return

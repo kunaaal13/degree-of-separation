@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import CreateUser from './CreateUser/CreateUser'
 import Home from './Home/Home'
 import Menu from './Menu'
 import Profile from './Profile/Profile'
@@ -9,7 +10,10 @@ interface Props {
 }
 
 function Main({ users, setUsers }: Props) {
+  // state to manage selected menu
   const [selectedMenu, setSelectedMenu] = useState('home')
+
+  // state to manage selected user
   const [selectedUser, setSelectedUser] = useState<User | null>(null)
 
   return (
@@ -29,7 +33,9 @@ function Main({ users, setUsers }: Props) {
           />
         )}
 
-        {selectedMenu === 'new user' && <div>New User</div>}
+        {selectedMenu === 'new user' && (
+          <CreateUser users={users} setUsers={setUsers} />
+        )}
 
         {selectedMenu === 'user' && (
           <Profile user={selectedUser} users={users} />

@@ -1,4 +1,4 @@
-import { data } from '../constants'
+import { data } from './constants'
 import { addFriend, addUser } from './map'
 
 export function createNetwork(users: [User]) {

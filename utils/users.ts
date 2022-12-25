@@ -1,4 +1,4 @@
-import { data } from '../constants'
+import { data } from './constants'
 
 export const initializeUsers = () => {
   const newUser: User = {

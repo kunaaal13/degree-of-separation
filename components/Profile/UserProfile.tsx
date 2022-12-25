@@ -5,11 +5,12 @@ interface Props {
 }
 
 function UserProfile({ user }: Props) {
+  // if user is null return null
   if (!user) return null
 
   return (
     <div className='w-full flex items-center justify-center'>
-      <div className='w-full md:w-2/3 h-36 bg-gray-100 rounded-md shadow-md p-4 flex items-center'>
+      <div className='w-full md:w-2/3 h-36 bg-gray-100 dark:bg-gray-700 dark:shadow-gray-700 rounded-md shadow-md p-4 flex items-center'>
         {/* Image */}
         <div className='h-24 w-24 rounded-full'>
           <img
@@ -21,11 +22,13 @@ function UserProfile({ user }: Props) {
 
         {/* Details */}
         <div className='ml-10 flex-1'>
-          <h1 className='text-lg md:text-xl font-semibold line-clamp-1'>
+          <h1 className='text-lg md:text-xl font-semibold line-clamp-1 '>
             {user.name}
           </h1>
 
-          <p className='text-gray-500 text-xs'>@{user.username}</p>
+          <p className='text-gray-500 text-xs dark:text-gray-200'>
+            @{user.username}
+          </p>
 
           <p className='line-clamp-1 md:line-clamp-2 text-sm mt-1'>
             {user.bio}
