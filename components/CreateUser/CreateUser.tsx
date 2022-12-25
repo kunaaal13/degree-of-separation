@@ -33,13 +33,22 @@ function CreateUser({ users, setUsers }: Props) {
       // create data to send to cloudinary
       const data = new FormData()
       data.append('file', files[0])
-      data.append('upload_preset', 'degreeofsep')
-      data.append('cloud_name', 'kunaaal13')
+
+      // check if env variables are set
+      if (
+        process.env.NEXT_PUBLIC_Upload_Preset === undefined ||
+        process.env.NEXT_PUBLIC_Cloud_Name === undefined
+      ) {
+        return alert('Please set env variables')
+      }
+
+      data.append('upload_preset', process.env.NEXT_PUBLIC_Upload_Preset)
+      data.append('cloud_name', process.env.NEXT_PUBLIC_Cloud_Name)
 
       // send data to cloudinary
       try {
         const res = await Axios.post(
-          'https://api.cloudinary.com/v1_1/kunaaal13/image/upload',
+          `https://api.cloudinary.com/v1_1/${process.env.NEXT_PUBLIC_Cloud_Name}/image/upload`,
           data
         )
         // handle success
